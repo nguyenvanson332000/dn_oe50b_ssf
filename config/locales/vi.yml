@@ -147,6 +147,7 @@ vi:
       quantity: "Số Lượng"
       total_cost: "Tổng Tiền"
   order:
+    at_time: "Vào lúc: "
     name: "Đặt sân"
     search: "Tìm kiếm"
     title_admin:
@@ -454,6 +455,7 @@ vi:
     booking_field: "Quản lý đặt sân"
   date_format: "%d/%m/%Y"
   time_format: "%k:%M"
+  date_time_format: "%m/%d/%Y %H:%M:%S"
   date:
     formats:
       default: "%d/%m/%Y"
@@ -495,3 +497,8 @@ vi:
     month: "Người Dùng Đăng Ký Theo Tháng Mỗi Năm"
     quarter: "Người Dùng Đăng Ký Theo Quý Mỗi Năm"
     year: "Người Dùng Đăng Ký Hằng Năm"
+  notification:
+    title: "Đơn hàng đã được xử lý"
+    content: "Đơn hàng của bạn đã được xử lý ở trạng thái: "
+    link: "vui lòng kiểm tra tại"
+    not_found: "không tìm thấy thông báo"

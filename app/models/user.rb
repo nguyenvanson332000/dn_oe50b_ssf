@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_many :orders, dependent: :destroy
   has_many :comments, dependent: :destroy
-
+  has_many :notifications, foreign_key: :recipient_id, dependent: :destroy
   before_save :downcase_email
   ransack_alias :user, :name_or_email_or_phone
   validates :email, format: {with: Settings.email_regex},

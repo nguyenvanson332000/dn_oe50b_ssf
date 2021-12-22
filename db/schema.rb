@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_22_182143) do
+ActiveRecord::Schema.define(version: 2021_12_24_062842) do
 
-  create_table "comments", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "soccer_field_id", null: false
+  create_table "comments", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "soccer_field_id", null: false
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -22,31 +22,20 @@ ActiveRecord::Schema.define(version: 2021_12_22_182143) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "notifications", force: :cascade do |t|
-    t.string "target_type", null: false
-    t.integer "target_id", null: false
-    t.string "notifiable_type", null: false
-    t.integer "notifiable_id", null: false
-    t.string "key", null: false
-    t.string "group_type"
-    t.integer "group_id"
-    t.integer "group_owner_id"
-    t.string "notifier_type"
-    t.integer "notifier_id"
-    t.text "parameters"
-    t.datetime "opened_at"
+  create_table "notifications", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "recipient_id"
+    t.integer "actor_id"
+    t.string "notice_type"
+    t.string "title"
+    t.string "content"
+    t.datetime "checked"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["group_owner_id"], name: "index_notifications_on_group_owner_id"
-    t.index ["group_type", "group_id"], name: "index_notifications_on_group"
-    t.index ["notifiable_type", "notifiable_id"], name: "index_notifications_on_notifiable"
-    t.index ["notifier_type", "notifier_id"], name: "index_notifications_on_notifier"
-    t.index ["target_type", "target_id"], name: "index_notifications_on_target"
   end
 
-  create_table "order_details", force: :cascade do |t|
-    t.integer "order_id", null: false
-    t.integer "soccer_field_id", null: false
+  create_table "order_details", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.bigint "soccer_field_id", null: false
     t.bigint "current_price"
     t.string "booking_used"
     t.integer "type_field"
@@ -57,8 +46,8 @@ ActiveRecord::Schema.define(version: 2021_12_22_182143) do
     t.index ["soccer_field_id"], name: "index_order_details_on_soccer_field_id"
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.integer "user_id", null: false
+  create_table "orders", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.integer "quantity"
     t.integer "status"
     t.bigint "total_cost"
@@ -69,7 +58,7 @@ ActiveRecord::Schema.define(version: 2021_12_22_182143) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-  create_table "soccer_fields", force: :cascade do |t|
+  create_table "soccer_fields", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "field_name"
     t.integer "type_field"
     t.bigint "price"
@@ -80,9 +69,9 @@ ActiveRecord::Schema.define(version: 2021_12_22_182143) do
     t.string "code"
   end
 
-  create_table "soccer_rates", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "soccer_field_id", null: false
+  create_table "soccer_rates", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "soccer_field_id", null: false
     t.integer "rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -90,25 +79,7 @@ ActiveRecord::Schema.define(version: 2021_12_22_182143) do
     t.index ["user_id"], name: "index_soccer_rates_on_user_id"
   end
 
-  create_table "subscriptions", force: :cascade do |t|
-    t.string "target_type", null: false
-    t.integer "target_id", null: false
-    t.string "key", null: false
-    t.boolean "subscribing", default: true, null: false
-    t.boolean "subscribing_to_email", default: true, null: false
-    t.datetime "subscribed_at"
-    t.datetime "unsubscribed_at"
-    t.datetime "subscribed_to_email_at"
-    t.datetime "unsubscribed_to_email_at"
-    t.text "optional_targets"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["key"], name: "index_subscriptions_on_key"
-    t.index ["target_type", "target_id", "key"], name: "index_subscriptions_on_target_type_and_target_id_and_key", unique: true
-    t.index ["target_type", "target_id"], name: "index_subscriptions_on_target"
-  end
-
-  create_table "users", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "phone"
     t.string "country"

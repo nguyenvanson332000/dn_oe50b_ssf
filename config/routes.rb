@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :static_pages, only: %i(index show)
     resources :carts
     resources :comments, only: %i(create)
+    resources :notifications
 
     namespace :admin do
       get "/soccer_field_path/:id", to: "soccer_fields#destroy"

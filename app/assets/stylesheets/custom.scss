@@ -9,6 +9,7 @@ $color-footera:#555;
 $color-footer-hover:#222;
 $color-error_explanation: #FF3300;
 $gray-lighter: #D3D3D3;
+$gray_dark: #dfebeb;
 
 body {
   padding-top: 56px;
@@ -619,4 +620,32 @@ input {
 .card-total
 {
   width: 100%;
+}
+
+.btn__badge {
+  background: #FF5D5D;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  border-radius: 15px;
+  padding: 5px
+}
+.btn__badge--red {
+  background: $red;
+}
+.noti-li{
+  padding: 10px 0px 3px 5px;
+  margin-left: 11px;
+  margin-top: 5px;
+  height: 57px;
+  width: 162px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+.not-read {
+  background-color: $gray_dark;
+}
+.seen {
+  background-color: $white-color;
 }

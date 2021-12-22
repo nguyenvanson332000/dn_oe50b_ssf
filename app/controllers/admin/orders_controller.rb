@@ -10,6 +10,7 @@ class Admin::OrdersController < AdminController
   def update
     if @order.update_status params[:stt]
       send_mail_when_order
+      create_notification @order
       flash[:notice] = t "booking.update_booking.update_sucess"
     else
       flash[:alert] = t "booking.update_booking.update_fail"
@@ -42,5 +43,11 @@ class Admin::OrdersController < AdminController
 
     UserMailer.send("#{@order.status}_order_by_admin".to_sym, @order)
               .deliver_later
+  end
+
+  def create_notification order
+    Notification.create(recipient: order.user, actor: current_user,
+                          title: t("notification.title"),
+                          content: t("notification.content") + order.status)
   end
 end
