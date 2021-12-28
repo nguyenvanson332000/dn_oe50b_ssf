@@ -1,0 +1,8 @@
+<div class="col-lg-9">
+  <h3><%= @notification.title %></h3>
+  <h6>
+    <%= t "order.at_time" %>
+    <%= @notification.created_at.strftime(t"date_time_format") %>
+  </h6>
+  <p><%= @notification.content %></p>
+</div>

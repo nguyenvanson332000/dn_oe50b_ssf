@@ -39,7 +39,5 @@ class ApplicationController < ActionController::Base
     return unless params[:q]
 
     return if @q.result.any?
-
-    flash[:info] = t "search.info"
   end
 end

@@ -87,18 +87,18 @@ $('.shopping').on('click', function () {
     },
     success: function (data) {
       if(data.error) {
-        alert(I18n.t("alert.add_to_cart.order_fail"));
+        alert("Sân đã có người đặt, Vui lòng chọn sân khác!");
       };
       if(!data.size_cart) {
-        alert(I18n.t("alert.add_to_cart.ordered"));
+        alert("Sân đã đặt!");
       };
       if(data.size_cart > 0) {
-        alert(I18n.t("alert.add_to_cart.order_success"));
+        alert("Đặt thành công, Vùi lòng kiểm tra và Chốt đơn!");
       };
       window.location.reload();
     },
     error: function () {
-      alert(I18n.t("alert.add_to_cart.fail"));
+      alert("Thêm giỏ hàng Thất Bại!");
     }
   });
 });

@@ -36,6 +36,7 @@ gem "cancancan"
 gem "ransack"
 gem "chartkick"
 gem "groupdate"
+gem "whenever", require: false
 
 group :development, :test do
   gem "factory_bot_rails"
