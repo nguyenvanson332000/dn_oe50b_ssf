@@ -12,8 +12,6 @@ $(document).ready(function() {
     }).done(function (data) {
       alert(data.notice);
       window.location.reload();
-    }).fail(function (data) {
-      alert(data.alert);
     });
   });
 })

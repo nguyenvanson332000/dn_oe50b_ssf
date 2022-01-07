@@ -14,6 +14,7 @@ class Order < ApplicationRecord
   scope :status_asc, ->{order status: :asc}
   scope :date_desc, ->{order created_at: :desc}
   scope :accept, ->{where(status: :accept)}
+  scope :is_pending, ->{where("status = ?", 0).size}
   scope :find_date_accept, (lambda do |date|
     where("created_at LIKE ? AND status = ?", "%#{date}%",
           Order.statuses[:accept])

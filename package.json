@@ -12,8 +12,10 @@
     "bootstrap-icons": "^1.7.1",
     "chart.js": "^3.6.2",
     "chartkick": "^4.1.1",
+    "i18n-js": "^3.8.0",
     "jquery": "3.5.1",
     "popper.js": "^1.16.1",
+    "rails-erb-loader": "^5.5.2",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"

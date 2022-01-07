@@ -503,3 +503,7 @@ en:
     content: "Your order has been processed at status:"
     link: " please check at"
     not_found: "not_found"
+    notify: "Statistics on the number of unapproved pitch orders"
+    content_notify: "The number of yards that need to be solved is :"
+    title_remind: "Notify users pending approval"
+    content_ad: "Please go to order soccer field manage to approve"

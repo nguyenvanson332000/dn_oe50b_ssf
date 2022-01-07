@@ -502,3 +502,7 @@ vi:
     content: "Đơn hàng của bạn đã được xử lý ở trạng thái: "
     link: "vui lòng kiểm tra tại"
     not_found: "không tìm thấy thông báo"
+    notify: "Thống kê số lượng đơn đặt sân chưa được xử lý"
+    content_notify: "Số lượng sân cần được giải quyết là: "
+    title_remind: "Thông báo người dùng đang chờ phê duyệt"
+    content_ad: "Vui lòng vào quản lý đơn đặt sân để phê duyệt!"

@@ -10,7 +10,7 @@ $(document).ready(function() {
       },
       dataType: 'JSON'
     }).done(function (data) {
-      alert(I18n.t("alert.process_succes"));
+      alert("xử lý thành công !");
       window.location.reload();
     });
   });
