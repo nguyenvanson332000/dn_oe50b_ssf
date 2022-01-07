@@ -151,6 +151,7 @@ en:
       quantity: "Quantily"
       total_cost: "Total Cost"
   order:
+    at_time: "At time: "
     name: "Order"
     search: "Seach"
     title_admin:
@@ -466,6 +467,7 @@ en:
       short: "%H:%M"
   date_format: "%d/%m/%Y"
   time_format: "%k:%M"
+  date_time_format: "%m/%d/%Y %H:%M:%S"
   alert:
     add_to_cart:
       fail: "Add to cart FAIL!"
@@ -496,3 +498,8 @@ en:
     month: "Users Register By Month Of Each Year"
     quarter: "Users Register By Quarter Of Each Year"
     year: "Users Register Every Year"
+  notification:
+    title: "Order has been processed"
+    content: "Your order has been processed at status:"
+    link: " please check at"
+    not_found: "not_found"
