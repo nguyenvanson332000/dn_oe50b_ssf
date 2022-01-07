@@ -151,6 +151,7 @@ en:
       quantity: "Quantily"
       total_cost: "Total Cost"
   order:
+    submit: "submit"
     at_time: "At time: "
     name: "Order"
     search: "Seach"
@@ -507,3 +508,15 @@ en:
     content_notify: "The number of yards that need to be solved is :"
     title_remind: "Notify users pending approval"
     content_ad: "Please go to order soccer field manage to approve"
+<<<<<<< HEAD
+=======
+  ratings:
+    index: "See all rating"
+    point: " Point"
+    reviews: "reviews"
+    user: "User"
+    comment: "Comment"
+    already: "You are already rating this product"
+    success: "Thank you for your rating"
+    fail: "Rating fail"
+>>>>>>> Soccer_rate
