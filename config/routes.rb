@@ -17,7 +17,9 @@ Rails.application.routes.draw do
     resources :account_activations, only: :edit
     resources :carts
     resources :password_resets, only: %i(new create edit update)
-    resources :static_pages, only: %i(index show)
+    resources :static_pages, only: %i(index show) do
+      resources :ratings, only: %i(index create)
+    end
     resources :carts
     resources :comments, only: %i(create)
     resources :notifications

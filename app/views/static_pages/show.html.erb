@@ -22,6 +22,19 @@
       <%end%>
     </h5>
   </div>
+  <div class="row">
+    <h5>
+      <div class="rating">
+        <div class="star-rating mb-2">
+          <div class="star-rating-front" style="width: <%= @soccer_field.rating_percentage %>%; height: 23px;">★★★★★</div>
+          <div class="star-rating-back">★★★★★</div>
+          <small>(<%= @soccer_field.ratings.count %> <%= t("ratings.reviews") %>)
+          </small>
+        </div>
+      </div>
+    <%= render "ratings/form", rating: @rating, soccer_field: @soccer_field %>
+    </h5>
+  </div>
   <div class="row pt-4">
     <p class="content-yard">
       <h4 class="font-weight-bold"><%= t(".description") %></h4>
