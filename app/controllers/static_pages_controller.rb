@@ -11,6 +11,7 @@ class StaticPagesController < ApplicationController
     @booking_used = OrderDetail.all_time(soccer_fields).pluck(:booking_used)
     @comments = @soccer_field.comments.newest
     @comment = Comment.new
+    @rating = Rating.new
   end
 
   private

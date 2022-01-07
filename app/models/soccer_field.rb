@@ -1,6 +1,6 @@
 class SoccerField < ApplicationRecord
   has_many :order_details, dependent: :destroy
-  has_many :soccer_rates, dependent: :destroy
+  has_many :ratings, dependent: :destroy
   has_many :comments, dependent: :destroy
   ransack_alias :soccer_field, :field_name
   scope :order_by_field_name, ->{order :field_name}
@@ -20,4 +20,20 @@ class SoccerField < ApplicationRecord
   scope :search_name, (lambda do |pr|
     where("lower(field_name) LIKE :search", search: "%#{pr}%") if pr.present?
   end)
+
+  def avg_rating
+    if ratings.present?
+      ratings.average(:rating).round(1).to_f
+    else
+      0.0
+    end
+  end
+
+  def rating_percentage
+    if ratings.present?
+      ratings.average(:rating).round(1).to_f * 100 / 5
+    else
+      0.0
+    end
+  end
 end

@@ -58,6 +58,18 @@ ActiveRecord::Schema.define(version: 2021_12_24_062842) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+  create_table "ratings", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "soccer_field_id", null: false
+    t.integer "rating"
+    t.integer "parent_id"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["soccer_field_id"], name: "index_ratings_on_soccer_field_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
+  end
+
   create_table "soccer_fields", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "field_name"
     t.integer "type_field"
@@ -67,16 +79,6 @@ ActiveRecord::Schema.define(version: 2021_12_24_062842) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "code"
-  end
-
-  create_table "soccer_rates", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "soccer_field_id", null: false
-    t.integer "rate"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["soccer_field_id"], name: "index_soccer_rates_on_soccer_field_id"
-    t.index ["user_id"], name: "index_soccer_rates_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -113,6 +115,6 @@ ActiveRecord::Schema.define(version: 2021_12_24_062842) do
   add_foreign_key "order_details", "orders"
   add_foreign_key "order_details", "soccer_fields"
   add_foreign_key "orders", "users"
-  add_foreign_key "soccer_rates", "soccer_fields"
-  add_foreign_key "soccer_rates", "users"
+  add_foreign_key "ratings", "soccer_fields"
+  add_foreign_key "ratings", "users"
 end

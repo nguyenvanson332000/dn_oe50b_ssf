@@ -147,6 +147,10 @@ vi:
       quantity: "Số Lượng"
       total_cost: "Tổng Tiền"
   order:
+<<<<<<< HEAD
+=======
+    submit: "Xác nhận"
+>>>>>>> Soccer_rate
     at_time: "Vào lúc: "
     name: "Đặt sân"
     search: "Tìm kiếm"
@@ -506,3 +510,12 @@ vi:
     content_notify: "Số lượng sân cần được giải quyết là: "
     title_remind: "Thông báo người dùng đang chờ phê duyệt"
     content_ad: "Vui lòng vào quản lý đơn đặt sân để phê duyệt!"
+  ratings:
+    index: "Xem tất cả đánh giá"
+    point: " điểm"
+    reviews: "đánh giá"
+    user: "Người dùng"
+    comment: "Bình luận"
+    already: "Bạn đã đánh giá sản phẩm này rồi"
+    success: "Cảm ơn đánh giá của bạn"
+    fail: "Đánh giá thất bại"
