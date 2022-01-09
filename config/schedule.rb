@@ -35,6 +35,10 @@ set :output, "log/cron_error.log"
 #   rake "order:show_order_status_pending"
 # end
 
+every "0 16 * * *" do
+  puts "Sending notifications"
+  rake "admin_notify:send_noti"
+end
 
 every "* 17 * * 5" do
   command "echo 'show_order_status_pending'"

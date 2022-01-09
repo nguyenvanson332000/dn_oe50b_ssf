@@ -8,7 +8,6 @@ class RatingsController < ApplicationController
   end
 
   def create
-
     @rating = current_user.ratings.build rating_params
     @rating.soccer_field_id = @soccer_field.id
     if @rating.save

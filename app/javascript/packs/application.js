@@ -10,6 +10,7 @@ require("channels")
 require("jquery")
 import "bootstrap"
 import "chartkick/chart.js"
+import "bootstrap-datepicker"
 require("packs/reply")
 require("packs/handle_request_order")
 require("packs/handle_order_user")
