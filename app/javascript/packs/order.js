@@ -30,6 +30,9 @@ function handle_order(date,id_order_detail){
 }
   
 $(document).ready(function() {
+  $("#date").datepicker({
+    minDate: new Date()
+  });
   $(document).on('click','.ordered_soccer_field',function(){
     Swal.fire({
       icon: 'error',
