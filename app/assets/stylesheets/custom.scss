@@ -10,6 +10,8 @@ $color-footer-hover:#222;
 $color-error_explanation: #FF3300;
 $gray-lighter: #D3D3D3;
 $gray_dark: #dfebeb;
+$star_color: #ff9f1a;
+$border-color: #bbb;
 
 body {
   padding-top: 56px;
@@ -649,3 +651,48 @@ input {
 .seen {
   background-color: $white-color;
 }
+
+.rating-box .ratings .fa{
+  font-size: 30px;
+  color: $star_color;
+  cursor: pointer;
+}
+
+.main-rating {
+  display: flex;
+  margin-top: 36px
+}
+
+.rating-value-display {
+  font-size: 20px;
+}
+
+.star-rating {
+  position: relative;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+}
+.star-rating-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: $star_color;
+}
+.star-rating-back {
+  color: $border-color;
+}
+
+.average-score {
+  display: flex;
+}
+.average-score-display {
+  font-size: 16px;
+}
+
+.textarea{
+  width: 250px;
+  height: 70px;
+}
+
