@@ -508,8 +508,7 @@ en:
     content_notify: "The number of yards that need to be solved is :"
     title_remind: "Notify users pending approval"
     content_ad: "Please go to order soccer field manage to approve"
-<<<<<<< HEAD
-=======
+    title_ad: " booking soccer field"
   ratings:
     index: "See all rating"
     point: " Point"
@@ -519,4 +518,4 @@ en:
     already: "You are already rating this product"
     success: "Thank you for your rating"
     fail: "Rating fail"
->>>>>>> Soccer_rate
+    
