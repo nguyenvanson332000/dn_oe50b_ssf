@@ -517,3 +517,5 @@ vi:
     already: "Bạn đã đánh giá sản phẩm này rồi"
     success: "Cảm ơn đánh giá của bạn"
     fail: "Đánh giá thất bại"
+  flash:
+    not_found: "Xử lý không thành công!"
