@@ -38,6 +38,7 @@ gem "chartkick"
 gem "groupdate"
 gem "whenever", require: false
 gem "bootstrap-datepicker-rails"
+gem "active_model_serializers", "~> 0.10.12"
 
 group :development, :test do
   gem "factory_bot_rails"
