@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include CartsHelper
 
   before_action :set_locale, :set_search
+  protect_from_forgery with: :exception
 
   rescue_from CanCan::AccessDenied do |_exception|
     if user_signed_in?

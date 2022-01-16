@@ -13,6 +13,8 @@ en:
           attributes:
             password_confirmation:
               confirmation: "Unmatched password"
+            email:
+              taken: "Email is used"
   application:
     check_admin:
       warning: "You not admin!"

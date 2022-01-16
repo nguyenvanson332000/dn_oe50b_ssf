@@ -13,6 +13,8 @@ vi:
           attributes:
             password_confirmation:
               confirmation: "Mật khảu không được trùng"
+            email:
+              taken: "Email đã được sử dụng!"
   application:
     check_admin:
       warning: "Bạn không phải quản trị viên!"
