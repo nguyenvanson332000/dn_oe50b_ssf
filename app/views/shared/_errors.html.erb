@@ -1,0 +1,9 @@
+<div class="error_explanation">
+  <h2><%= pluralize(object.errors.count, "error") %> prohibited
+ this <%= object.model_name.singular %> from being saved:</h2>
+  <ul>
+  <% object.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>

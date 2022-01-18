@@ -3,6 +3,7 @@ module Api
     class SoccerFieldsController < ApplicationController
       before_action :load_soccer_field, only: %i(show update destroy)
       before_action :check_search_location, only: :index
+      skip_before_action :verify_authenticity_token
       rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
       def index
