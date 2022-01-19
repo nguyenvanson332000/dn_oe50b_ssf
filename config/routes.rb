@@ -8,6 +8,9 @@ Rails.application.routes.draw do
         post "sign_in", to: "sessions#create"
         delete "sign_out", to: "sessions#destroy"
       end
+      namespace "admin" do
+        resources :orders, except: %i(create destroy)
+      end
     end
   end
 
