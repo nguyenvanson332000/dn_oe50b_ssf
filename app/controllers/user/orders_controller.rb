@@ -16,7 +16,7 @@ class User::OrdersController < UserController
                       status: 0, total_cost: soccer_field.price * value.length)
         create_order_detail value, ordered, soccer_field
         create_notification
-        end_mail_when_order ordered
+        send_mail_when_order ordered
       end
     end
     delete_cookie_soccer_field
