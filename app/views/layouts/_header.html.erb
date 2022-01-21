@@ -16,22 +16,24 @@
           <%= link_to t("home.name"), home_path, class: "nav-link" %>
         </li>
         <% if user_signed_in? %>
-          <div class="" id="quantity_products" data-notify="<%= size_cart %>">
-            <%= link_to carts_path do %>
-              <p class="text-white mr-2 btn btn-secondary" id="size_cart">
-                <i class="fa fa-cart-plus"></i> : <%= size_cart %>
-              </p>
-            <% end %>
+          <div class="dropdown show">
+            <div class="" id="quantity_products" data-notify="<%= size_cart %>">
+              <%= link_to carts_path do %>
+                <p class="text-white mr-2 btn btn-secondary" id="size_cart">
+                  <i class="fa fa-cart-plus"> <span id="show_size_cart"><%= size_cart %></span> </i>
+                </p>
+              <% end %>
+            </div>
           </div>
-          <div class="dropdown ">
-            <%= link_to "#", class: "mr-2 btn btn-secondary dropdown-toggle", "data-toggle": "dropdown" do %>
-              <i class="fa fa-bell rgtspace-5"></i>
-               <span class="btn__badge btn__badge--red">
-                  <%= current_user.notifications.unchecked %>
-               </span>
+          <div class="dropdown show">
+            <%= link_to "#", {class: "ml btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
               <b class="caret"></b>
+              <span id="open_notificationcus">
+                <%= render "notifications/counter", counter: current_user.notifications.unchecked %>
+              </span>
+
             <% end %>
-            <div class="dropdown-menu  pre-scrollable">
+            <div class="dropdown-menu  pre-scrollable" id="notificationList">
               <%= render current_user.notifications.sort_by_created %>
             </div>
           </div>

@@ -624,7 +624,7 @@ input {
   width: 100%;
 }
 
-.btn__badge {
+.btn-badge {
   background: #FF5D5D;
   color: white;
   font-size: 12px;
@@ -632,7 +632,7 @@ input {
   border-radius: 15px;
   padding: 5px
 }
-.btn__badge--red {
+.btn-badge--red {
   background: $red;
 }
 .noti-li{
@@ -696,3 +696,10 @@ input {
   height: 70px;
 }
 
+#show_size_cart {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  border-radius: 15px;
+  padding: 5px
+}
