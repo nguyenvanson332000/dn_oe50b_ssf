@@ -59,4 +59,7 @@ Rails.application.routes.draw do
       get "order_soccer_field", to: "orders#order_soccer_field"
     end
   end
+
+  mount ActionCable.server => "/cable"
+
 end
