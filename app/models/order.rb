@@ -1,4 +1,6 @@
 class Order < ApplicationRecord
+  extend FriendlyId
+  friendly_id :status, use: %i(slugged finders)
   belongs_to :user
   has_many :order_details, dependent: :destroy
 
@@ -21,6 +23,10 @@ class Order < ApplicationRecord
           Order.statuses[:accept])
   end)
   scope :find_sum_day, ->{group(:status).sum(:total_cost)}
+
+  def should_generate_new_friendly_id?
+    status_changed? || super
+  end
 
   def update_status status
     update_column(:status, status)
