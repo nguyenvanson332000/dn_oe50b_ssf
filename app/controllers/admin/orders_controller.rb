@@ -24,7 +24,7 @@ class Admin::OrdersController < AdminController
   private
 
   def load_order
-    @order = Order.find_by id: params[:id]
+    @order = Order.friendly.find params[:id]
     return if @order
 
     flash[:warning] = t "booking.update_booking.not_exist_id"
