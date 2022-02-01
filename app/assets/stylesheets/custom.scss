@@ -385,11 +385,21 @@ input {
     font-weight: normal;
   }
 }
+
 #session_remember_me {
   width: auto;
   margin-left: 0;
 }
 
+.remember_me {
+  position: absolute;
+  top: 222px;
+  left: -128px;
+}
+
+.auth-form__socials{
+  padding: 6px 40px;
+}
 /* Users index */
 .users {
   list-style: none;

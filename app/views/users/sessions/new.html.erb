@@ -29,8 +29,8 @@
   <% end %>
   <%= render "users/shared/links" %>
   <%= link_to fa_icon("facebook", text: t("links.login_fb")), user_facebook_omniauth_authorize_path,
-   method: :post, class: "btn btn-primary" %><br>
+   method: :post, class: "btn btn-primary float-right auth-form__socials" %><br>
   <%= link_to fa_icon("google", text: t("links.login_gg")), user_google_oauth2_omniauth_authorize_path,
-   method: :post,  class: "btn btn-danger mt-1" %>
+   method: :post,  class: "btn btn-danger float-left auth-form__socials" %>
 </div>
 <%= render "users/shared/logo"%>
