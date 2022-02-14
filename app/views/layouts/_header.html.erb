@@ -25,7 +25,7 @@
               <% end %>
             </div>
           </div>
-          <div class="dropdown show">
+          <div class="header__navbar-user-notification">
             <%= link_to "#", {class: "ml btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
               <b class="caret"></b>
               <span id="open_notificationcus">
@@ -33,27 +33,32 @@
               </span>
 
             <% end %>
-            <div class="dropdown-menu  pre-scrollable" id="notificationList">
-              <%= render current_user.notifications.sort_by_created %>
+            <div class="header__navbar-user-notification-menu">
+              <h15 class="header__cart-heading">
+                <%= t"layouts.header.notification"%>
+              </h15>
+              <div class="pre-scrollable" id="notificationList">
+                <%= render current_user.notifications.sort_by_created %>
+              </div>
             </div>
           </div>
-          <div class="dropdown show">
+          <div class="header__navbar-user">
           <%= link_to "#", {class: "ml-2 btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
             <%= t ".account" %>
             <b class="caret"></b>
           <% end %>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="header__navbar-user-menu" aria-labelledby="dropdownMenuLink">
             <%= link_to t("home.profile"), edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to t("home.logout"), logout_path,method: :delete, class: "dropdown-item" %>
           </div>
         </div>
         <% else %>
-          <li class="nav-item">
-            <%= link_to t("home.log_in"), login_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to t("home.sign_up"), signup_path, class: "nav-link" %>
-          </li>
+            <div class="nav-item">
+              <%= link_to t("home.log_in"), login_path, class: "nav-link" %>
+            </div>
+            <div class="nav-item">
+              <%= link_to t("home.sign_up"), signup_path, class: "nav-link" %>
+            </div>
         <% end %>
       </ul>
     </div>

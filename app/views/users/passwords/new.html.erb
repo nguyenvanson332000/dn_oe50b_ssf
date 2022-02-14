@@ -1,6 +1,6 @@
 <% provide(:title, t("title.paswords.forgot")) %>
 <div class="col-6">
-  <h2 class="text-center text-primary text-uppercase"><%= t "title.paswords.forgot" %></h2>
+  <h2 class="text-center text-primary text-uppercase text-margin"><%= t "title.paswords.forgot" %></h2>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= render "users/shared/error_messages", resource: resource %>
