@@ -428,6 +428,7 @@ en:
       account: "Account"
       logout: "Logout"
       size_cart: "Count cart"
+      notification: "Notifications ..."
     sidebar:
       profile_order: "Information User"
       manager_order_to_user: "Manager Order Of Me"

@@ -1,6 +1,6 @@
 <% provide :title, t(".title") %>
 <div class="col-6">
-  <h1 class="text-center text-primary"><%= t ".title" %></h1>
+  <h1 class="text-center text-primary text-margin"><%= t ".title" %></h1>
 
   <%= form_for(resource, as: resource_name, url: user_registration_path) do |f| %>
     <%= render "users/shared/error_messages", resource: resource %>

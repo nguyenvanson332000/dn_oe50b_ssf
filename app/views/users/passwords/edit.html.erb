@@ -1,6 +1,6 @@
 <% provide(:title, t("title.paswords.change")) %>
 <div class="col-6">
-  <h2 class="text-center text-primary text-uppercase"><%= t "title.paswords.change" %></h2>
+  <h2 class="text-center text-primary text-uppercase text-margin"><%= t "title.paswords.change" %></h2>
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "users/shared/error_messages", resource: resource %>
     <%= f.hidden_field :reset_password_token %>

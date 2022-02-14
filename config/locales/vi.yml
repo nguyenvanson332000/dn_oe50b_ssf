@@ -427,6 +427,7 @@ vi:
       account: "Tài khoản"
       logout: "Đăng xuất"
       size_cart: "Số lượng giỏ"
+      notification: "Thông Báo ..."
     sidebar:
       profile_order: "Thông tin khách hàng"
       manager_order_to_user: "Quản lý đơn của tôi"

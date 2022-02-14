@@ -1,6 +1,6 @@
 <% provide :title, t(".title") %>
 <div class="col-6">
-  <h2 class="text-center text-primary text-uppercase"><%= t ".edit" %></h2>
+  <h2 class="text-center text-primary text-uppercase text-margin"><%= t ".edit" %></h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "users/shared/error_messages", resource: resource %>

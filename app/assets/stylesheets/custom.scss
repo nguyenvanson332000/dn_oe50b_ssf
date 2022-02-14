@@ -12,6 +12,7 @@ $gray-lighter: #D3D3D3;
 $gray_dark: #dfebeb;
 $star_color: #ff9f1a;
 $border-color: #bbb;
+$white-color: #fff;
 
 body {
   padding-top: 56px;
@@ -393,7 +394,7 @@ input {
 
 .remember_me {
   position: absolute;
-  top: 222px;
+  top: 234px;
   left: -128px;
 }
 
@@ -711,5 +712,105 @@ input {
   font-size: 12px;
   position: absolute;
   border-radius: 15px;
-  padding: 5px
+  padding: 5px;
+  right: 6px;
+  top: 12px;
+}
+
+.header__navbar-user{
+  position: relative;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    padding-left: 0;
+    top: 45px;
+    right: 0;
+    background-color: $white-color;
+    width: 160px;
+    list-style: none;
+    border-radius: 2px;
+    z-index: 1;
+    box-shadow: 0 1px 2px #e0e0e0;
+    display: none;
+}
+
+.header__navbar-user-menu::before {
+    content: "";
+    border-width: 20px 15px;
+    border-style: solid;
+    border-color: transparent transparent $white-color transparent;
+    position: absolute;
+    right: 20px;
+    top: -30px;
+}
+
+.header__navbar-user-menu::after {
+    content: "";
+    border-width: 20px 27px;
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 100px;
+    height: 11px;
+}
+
+.header__navbar-user-notification{
+  position: relative;
+}
+
+.header__navbar-user-notification:hover .header__navbar-user-notification-menu {
+    display: block;
+}
+
+.header__navbar-user-notification-menu {
+    position: absolute;
+    padding-left: 0;
+    top: 45px;
+    right: 0;
+    background-color: $white-color;
+    width: 200px;
+    list-style: none;
+    border-radius: 2px;
+    z-index: 1;
+    box-shadow: 0 1px 2px #e0e0e0;
+    display: none;
+}
+
+.header__navbar-user-notification-menu::before {
+    content: "";
+    border-width: 20px 15px;
+    border-style: solid;
+    border-color: transparent transparent $white-color transparent;
+    position: absolute;
+    right: 20px;
+    top: -30px;
+}
+
+.header__navbar-user-notification-menu::after {
+    content: "";
+    border-width: 20px 27px;
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 100px;
+    height: 11px;
+}
+
+.header__cart-heading {
+    text-align: left;
+    margin: 8px 0 8px 12px;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.text-margin{
+  margin-top: 10px;
 }
